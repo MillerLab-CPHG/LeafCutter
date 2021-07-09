@@ -14,7 +14,7 @@ module load gcc/7.1.0 openmpi/3.1.4 R/4.0.0 python/3.6.8
 ### LEAFCUTTER STEP1: INTRON CLUTERING ####
 cat ${main_dir}/prefix.txt | while read prefix || [[ -n $line ]];
 do
-    sbatch -A cphg-millerlab \
+    sbatch -A "GROUP" \
            -p parallel \
            -t 24:00:00 \
            --mem=25g \
@@ -34,7 +34,7 @@ done
 ### LEAFCUTTER STEP2: DIFFERENTIAL SPLICING ANALYSIS ###
 cat ${main_dir}/prefix.txt | while read prefix || [[ -n $line ]];
 do
-    sbatch -A cphg-millerlab \
+    sbatch -A "GROUP" \
            -p parallel \
            -t 24:00:00 \
            --mem=25g \
@@ -52,7 +52,7 @@ done
 ### LEAFCUTTER STEP 3:  PREPARE LEAFCUTTER DS RESULTS FOR RDATA SUMMARY ###
 cat ${main_dir}/prefix.txt | while read prefix || [[ -n $line ]];
 do
-    sbatch -A cphg-millerlab \
+    sbatch -A "GROUP" \
            -p parallel \
            -t 24:00:00 \
            --mem=25g \
