@@ -5,15 +5,15 @@
 
 #Flags:
 
-nom_files_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/sQTL_mapping/QTLtools_runs/nominal_analyses/qtltools_finalrun_PCs_Age_Sex"
-snp_file_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/Coloc"
-out_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/Coloc/finalrun_PCs_Age_Sex_nominal"
+nom_files_dir="PATH_TO_NOMINAL_FILES"
+snp_file_dir="PATH_TO_GWAS_DATA"
+out_dir="PATH_TO_OUTPUT_DIR"
 
 module load gcc/7.1.0 openmpi/3.1.4 R/4.0.0
 
 for i in $(seq 1 22);
 do 
-        sbatch -A cphg-millerlab \
+        sbatch -A "Group" \
                -p parallel \
                -t 2:00:00 \
                --mem=25g \
