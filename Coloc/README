@@ -1,0 +1,17 @@
+Coloc pipeline for nominal QTLtools output:
+
+Note: This pipeline assumes that the QTLtools analysis was performed using whole chromosomes as regions. You need a QTLtool output file for each chromosome.
+
+1- Run coloc_file_prep.sh
+	-This shell script runs coloc_file_prep.R to prep the QTLtools output for coloc analysis
+
+2- Run coloc.sh
+	-This shell script runs coloc.R to run coloc analysis using input from previous step
+	-This script also takes as input the gwas cad data info
+
+3- Run biomart_annotate_coloc.sh
+	-This shell script runs biomart_annotate_coloc.R to annotate the summary dataframe output from coloc analysis
+	-The annotation includes gene name, chromosome number, and chromosome start
+
+4- Run coloc_concat_results.R (Optional)
+	-This R script concatenates the annotated coloc results for all 22 chromosomes
