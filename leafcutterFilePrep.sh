@@ -3,32 +3,32 @@
 ### UVA-CPHG MILLER LAB'S LEAFCUTTER FILE PREP PIPELINE ###
 
 #Flags:
-samples_list="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/diff_splicing_analysis_finalrun"
-BAM_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/STAR_WASP/persample_2pass_run2"
-JUNC_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/junc_files/unfiltered_junc"
+main_dir="PATH_TO_DATA"
+BAM_dir="PATH_TO_BAM_FILES"
+JUNC_dir="PATH_JUNC_FILES"
 
 ##################################################################################################
 ### INDEX BAM FILES WITH SAMTOOLS ###
-#module load samtools/1.10
-#cat ${samples_list}/samples.txt | while read sample || [[ -n $line ]];
-#do 
-#    sbatch -A cphg-millerlab \
-#           -p parallel \
-#           -t 1:00:00 \
-#           --mem=10g \
-#           -N 2 \
-#           -n 20 \
-#           --job-name=${sample}_index_log.out \
-#           --wrap="samtools index ${BAM_dir}/${sample}_Aligned.sortedByCoord.out.bam"
-#done
+module load samtools/1.10
+cat ${main_dir}/samples.txt | while read sample || [[ -n $line ]];
+do 
+    sbatch -A "GROUP" \
+           -p parallel \
+           -t 1:00:00 \
+           --mem=10g \
+           -N 2 \
+           -n 20 \
+           --job-name=${sample}_index_log.out \
+           --wrap="samtools index ${BAM_dir}/${sample}_Aligned.sortedByCoord.out.bam"
+done
 ##################################################################################################
 
 
 ##################################################################################################
 ### JUNCTION FILE CREATION ###
-cat ${samples_list}/samples.txt | while read sample || [[ -n $line ]];
+cat ${main_dir}/samples.txt | while read sample || [[ -n $line ]];
 do
-    sbatch -A cphg-millerlab \
+    sbatch -A "GROUP" \
            -p parallel \
            -t 1:00:00 \
            --mem=10g \
