@@ -5,8 +5,8 @@
 
 #Flags:
 
-coloc_file_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/Coloc/finalrun_PCs_Age_Sex_nominal"
-gwas_file_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/GWAS_CAD_loci"
+coloc_file_dir="PATH_TO_DATA"
+gwas_file_dir="PATH_TO_GWAS_DATA"
 
 module load gcc/7.1.0 openmpi/3.1.4 R/4.0.0
 
