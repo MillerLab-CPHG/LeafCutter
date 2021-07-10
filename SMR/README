@@ -1,0 +1,25 @@
+Pipeline to run SMR using nominal QTLtools output
+
+Note: You need to have 22 files (one for each chromosome) to run this pipeline. Each of the shell scripts is set up to submit 22 jobs.
+
+1- Run nominal_sQTL_file_processing.sh
+	-This shell script runs nominal_sQTL_file_processing.R which prepares the QTLtools output for SMR
+
+2- Run nominal_sQTL_smr_make-besd.sh
+	-This shell script runs nominal_sQTL_file_processing.R which makes the besd file SMR uses
+	-There should be 3 output files *.besd, *.epi and *.esi
+	-Files *.epi and *.esi will be missing some info. Such info is added in next step 
+
+3- Run nominal_sQTL_smr_update-besd.sh
+	-This shell script runs nominal_sQTL_smr_update-besd.R which updates the *.epi and *.esi files from previous step
+	-GeneID info is added to 5th column in *.epi file
+	-Ref, Alt, and MAF of Ref allele are added to last 3 columns of *.esi file
+
+4- Run nominal_sQTL_smr.sh
+	-This shell script runs nominal_sQTL_smr.R which runs the SMR analysis
+
+5- Run nominal_annotate_smr_results.sh (optional)
+	-This shell script runs nominal_annotate_smr_results.R which uses annotations from snpEff to annotate results
+
+6- Run nominal_concat_smr_results.R (optional)
+	-This R script concatenates the annotated results
