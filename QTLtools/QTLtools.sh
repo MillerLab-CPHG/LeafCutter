@@ -13,13 +13,13 @@ do
 		--mem=25g \
 		-N 4 \
 		-n 20 \
-		--wrap="QTLtools cis --vcf /project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/PCA/UVA_coronary_hg38_merged_imputed_filtered.vcf.gz \
-					--bed /project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/sQTL_mapping/Coronary_Artery_sQTL_finalrun/Coronary_Artery.leafcutter.modified.bed.gz \
+		--wrap="QTLtools cis --vcf /PATH_TO_VCF_FILE \
+					--bed /PATH_TO_PHENOTYPE_DATA \
 					--nominal 1 \
 					--window 200000 \
 					--std-err \
-					--cov /project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/sQTL_mapping/Coronary_Artery_sQTL_finalrun/covariates/Coronary_Artery.combined_covariates.txt \
-					--include-covariates /project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/sQTL_mapping/QTLtools_runs/nominal_analyses/qtltools_finalrun_PCs_Age_Sex/covariates.txt \
-					--out /project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/sQTL_mapping/QTLtools_runs/nominal_analyses/qtltools_finalrun_PCs_Age_Sex/Coronary_Artery_chr${j}_sqtls_nominal.txt.gz \
+					--cov /PATH_TO_COVARIATE_FILE \
+					--include-covariates /PATH_TO_FILE_OF_COVARIATES_TO_INCLUDE \
+					--out /PATH_OUPUT_DIR/PREFIX\
 					--region chr${j}"
 done
