@@ -11,5 +11,3 @@ STAR --runMode genomeGenerate \
 --genomeDir ./genome_index \
 --genomeFastaFiles ./UCSC_hg38.fa \
 --sjdbGTFfile ./gencode.v37.annotation.gtf
-
-
