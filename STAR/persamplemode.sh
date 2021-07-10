@@ -11,7 +11,7 @@ module load star/2.7.2b
 #samples.txt: 1-column txt file with sample names
 cat samples.txt | while read sample_name || [[ -n $line ]];
 do
-    sbatch -A cphg-millerlab \
+    sbatch -A "ALLOCATION" \
            -p parallel \
            -t 24:00:00 \
 	   --mem=50g \
