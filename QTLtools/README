@@ -8,4 +8,4 @@ Pipeline to run QTLtools
 
 Optional
 
-4- After running nominal pass, files can be large and you may need to filter based on significance. Run 
+4- After running nominal pass, files can be large and you may need to filter based on significance. Run sqtl_filter.sh which runs sqtl_filter.R to filter out pvalues greater than FDR 5%. Adjust sqtl_filter.R to change FDR threshold
