@@ -6,7 +6,7 @@ allchrs="--chr chr1 --chr chr2 --chr chr3 --chr chr4 --chr chr5 --chr chr6 --chr
 
 module load vcftools/0.1.16
 
-sbatch -A cphg-millerlab \
+sbatch -A "Allocation" \
 	-N 2 \
 	-n 20 \
 	-t 5:00:00 \
