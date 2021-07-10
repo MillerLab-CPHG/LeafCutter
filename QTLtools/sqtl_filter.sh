@@ -9,7 +9,7 @@ module load gcc/7.1.0 openmpi/3.1.4 R/4.0.0
 
 for i in $(seq 1 22);
 do
-	sbatch -A cphg-millerlab \
+	sbatch -A "ALLOCATION" \
 		-p parallel \
 		-t 3:00:00 \
 		--mem=25g \
