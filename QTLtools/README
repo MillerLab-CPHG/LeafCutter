@@ -1,3 +1,5 @@
 Pipeline to run QTLtools
 
-1-
+1- Make sure your vcf file is bgzipped and indexed with tabix
+
+2- QTLtools requires special formatting of .bed.gz file. See: https://qtltools.github.io/qtltools. Run 
