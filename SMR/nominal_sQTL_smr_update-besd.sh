@@ -3,7 +3,7 @@
 ### Shell script to update missing info from .esi and .epi files ###
 
 #Flags:
-main_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/SMR/finalrun_PCs_Age_Sex_nominal"
+main_dir="PATH_TO_MAKE_BEQTL_OUTPUT_FILES"
 
 module load gcc/7.1.0 openmpi/3.1.4 R/4.0.0
 
