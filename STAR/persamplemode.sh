@@ -2,14 +2,14 @@
 
 ###2-pass mode for per-sample mode
 
-fastq_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/Fastq-Trimmed-Files"
-vcf_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/vcf_files/vcfs_per_sample/vcfs"
-out_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/STAR_WASP/persample_2pass_run2"
-out_dir2="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/STAR_WASP/persample_2pass_AlignedtoTranscriptome_run"
+fastq_dir="PATH_TO_FASTQ_FILES"
+vcf_dir="PATH_TO_VCF_FILES_(ONE_PER_SAMPLE)"
+out_dir="PATH_TO_OUPUT_DIRECTORY"
 
 module load star/2.7.2b
 
-cat samples2.txt | while read sample_name || [[ -n $line ]];
+#samples.txt: 1-column txt file with sample names
+cat samples.txt | while read sample_name || [[ -n $line ]];
 do
     sbatch -A cphg-millerlab \
            -p parallel \
