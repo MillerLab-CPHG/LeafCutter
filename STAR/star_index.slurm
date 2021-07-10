@@ -3,7 +3,7 @@
 #SBATCH -n 32
 #SBATCH -t 50:00:00
 #SBATCH -p parallel
-#SBATCH -A cphg-millerlab
+#SBATCH -A "ALLOCATION"
 
 module load star/2.7.2b
 
