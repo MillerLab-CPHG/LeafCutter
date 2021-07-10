@@ -3,13 +3,13 @@
 ### Shell script to annotate every smr result file ###
 
 #Flags:
-main_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/SMR/finalrun_PCs_Age_Sex_nominal"
+main_dir="PATH_TO_NOMINAL_FILES"
 
 module load gcc/7.1.0 openmpi/3.1.4 R/4.0.0
 
 for i in $(seq 1 22);
 do
-        sbatch -A cphg-millerlab \
+        sbatch -A "GROUP" \
                -p parallel \
                -t 3:00:00 \
                --mem=25g \
