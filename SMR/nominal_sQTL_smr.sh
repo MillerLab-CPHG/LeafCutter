@@ -3,9 +3,9 @@
 ### Shell script to run SMR with nominal QTLtools results ###
 
 #Flags:
-bfile_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/SMR/plink_files"
-gwas_summary_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/GWAS_CAD_loci"
-beqtl_summary_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/SMR/finalrun_PCs_Age_Sex_nominal"
+bfile_dir="PATH_TO_PLINK_FILES"
+gwas_summary_dir="PATH_TO_GWAS_SUM_STATS"
+beqtl_summary_dir="PATH_TO_BEQTL_FILES"
 
 for i in $(seq 1 22);
 do
