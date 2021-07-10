@@ -8,4 +8,4 @@ Pipeline to run QTLtools
 
 4- (Optional) After running nominal pass, files can be large and you may need to filter based on significance. Run sqtl_filter.sh which runs sqtl_filter.R to filter out pvalues greater than FDR 5%. Adjust sqtl_filter.R to change FDR threshold
 
-5- Run 
+5- Run sqtl_filter_concat.R to concat all the filtered files and make a master sum stats file
