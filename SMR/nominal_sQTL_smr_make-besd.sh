@@ -4,7 +4,7 @@
 ### It runs every chr output file individually ###
 
 #Flags:
-nom_files_dir="/project/cphg-millerlab/CAD_QTL/coronary_QTL/transcriptome/LeafCutter/SMR/finalrun_PCs_Age_Sex_nominal"
+nom_files_dir="PATH_TO_NOMINAL_FILES"
 
 for i in $(seq 1 22);
 do
