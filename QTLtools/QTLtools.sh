@@ -7,7 +7,7 @@ module load gcc/7.1.0 qtltools/1.3.1
 
 for j in $(seq 1 22); 
 do
-	sbatch -A cphg-millerlab \
+	sbatch -A "ALLOCATION" \
 		-p parallel \
 		-t 10:00:00 \
 		--mem=25g \
